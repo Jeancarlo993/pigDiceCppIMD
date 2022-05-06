@@ -1,18 +1,18 @@
 #include <string>
 #include <vector>
-
+#include <iostream>
 #include "player.h"
 
 /// Construtor de uma máquina
 Player::Player(){
 	name = "Corleone";
-	contr = 1; //maquina
+	controller = 1; //maquina
 	player_dice.set_faces(6);
 	total_points = 0;
 	round_points = 0;
 };
 /// Construtor de um jogador qualquer
-Player::Player(std::string n; int contr; int n_faces){
+Player::Player(std::string n, int contr, int n_faces){
 	name = n;
 	controller = contr;
 	player_dice.set_faces(n_faces);
@@ -24,7 +24,7 @@ void Player::set_name(std::string n){
 	name = n;
 };
 /// retorna o nome do jogador
-string Player::get_name(){
+std::string Player::get_name(){
 	return name;
 };
 ///mostra o log do jogador. Cria um iterator percorre o vector e imprime cada string
@@ -43,7 +43,7 @@ void Player::set_total_points(int total){
 	total_points = total;
 };
 /// Retorna a pontuação total
-int Player::get_total_poits(){
+int Player::get_total_points(){
 	return total_points;
 };
 /// Modifica a pontuação do turno

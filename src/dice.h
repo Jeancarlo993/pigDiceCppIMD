@@ -13,4 +13,5 @@ class Dice{
 		Dice(int);	//!< Método construtor
 		Dice();		//!< Método construtor
 		int roll(); //!< Método que gera o número aleatório
+    void set_faces(int);
 };
