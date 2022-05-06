@@ -1,6 +1,6 @@
 #include <string>
 #include <vector>
-#include "dices.h"
+#include "dice.h"
 
 /***********************************************************************!
  * Essa classe representa um jogador que pode ser máquina ou humano.
