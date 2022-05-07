@@ -15,7 +15,7 @@ Dice::Dice(int f){
 int Dice::roll(){ 
 	unsigned seed = clock()*time(0);
 	srand(seed);
-	return rand()%faces+1;
+	return (rand()%faces)+1;
 };
 /// método para alterar numero de faces do dado
 void Dice::set_faces(int f){
