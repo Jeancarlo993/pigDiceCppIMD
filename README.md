@@ -1,9 +1,17 @@
 # Pig Dice Cpp IMD
 Projeto desenvolvido para a disciplina de Linguagem de Programação 1 na UFRN. 
 ## Classes
-* Dado
-	* sorteia um número ok
-	* pode ter varias faces ok
+### Dado
+Essa classe representa um dado que pode ter várias faces.
+Basseado na quantidade de faces, retorna um número aleatório
+de 1 até o numero de faces
+	#### Atributos
+		* faces -> o numero sorteado por um dado será de 1 até faces
+	#### Métodos
+		* Construtor -> por padrão inicia um dado com 6 faces
+		* Construtor(int) -> recebe como parâmetro um int e iniciar um dado com int faces
+		* roll -> faz o sorteio do dado e retorna o numero sorteado
+		* set_faces -> ajusta a quantidade de faces do dado
 * Jogo
 	* exibe as telas
 	* recebe as opções
