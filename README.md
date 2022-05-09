@@ -13,7 +13,7 @@ de 1 até o numero de faces
 		* roll -> faz o sorteio do dado e retorna o numero sorteado  
 		* set_faces -> ajusta a quantidade de faces do dado  
 
-* Jogador 
+* Jogador  
  Essa classe representa um jogador que pode ser máquina ou humano.
  O jogador também o seu log de jogadas, informando o que houve em cada
  rodada. Além disso, o jogador também tem seus pontos conquistados no
