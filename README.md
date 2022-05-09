@@ -37,30 +37,47 @@ de 1 até o numero de faces
 		* get_round_points(0 -> retorna os pontos do turno  
 		* set_player_log -> adiciona uma string ao player_log  
 		* show_player_log -> exibe o player log  
-<h3> Jogo </h3>  
-	<h4> Atributos </h4>
-	<h4> Métodos </h4>
-	
+* Jogo  
+Essa classe representa o jogo em si. No seu construtuor estarão todas 
+as etapas para o inicio do jogo. Depois outro método cuidará das rodadas
+e por fim um método cuidará do fim do jogo.
+O Player maquina será representado por 0 e o jogador humano por 1 
+	* Atributos 
+		* option -> opções de entrada para os jogadores humanos
+		* turno -> guarda a informação sobre de quem é o turno 
+		* count_rolls -> conta quantas rolagens foram feitas no turno
+		* estado -> 1 se o jogo continua, 0 se o jogo acabou. Encerra o while principal do jogo
+		* players_on -> um vector com todos os jogadores que estão jogando
+	* Métodos 
+		* show_rules() -> mostra as regras do jogo (estão em um arquivo .txt)
+		* game_over(int) -> recebe o jogador que ganhou, mostra a tela final e encerra o jogo
+		* sorteio() -> sorteia quem inicia o jogo
+		* tela_inicial() -> não foi implementada. mas a ideia é que seria exibida uma tela de abertura do jogo
+		* Construtor -> inicia o jogo mostrando as regras, iniciando os players, sorteando quem começa
+		* option_in() -> entrada das opções
+		* turn_hold(int) -> recebe um int que indica para quem deve mudar o turno
+		* turn_roll() -> faz a rolagem do dado para o turno
+		* quit() -> encerra o jogo
+		* board_game() -> exibe resultado parcial do jogo
+		* play() -> controla todo o jogo. Pede a opção do jogador, armazena os dados do jogo, exibe as telas 
 	
 ## O jogo
-* tela inicial
+* Mostra o manual
 	* iniciar
 		* escolher o nome
-		* escolher um dado
-	* sair
-* tela principal
-	* instruções
-	* sortear quem começa
-	* se computador
-		* faz jogada:
-			* se for 0: passa
-			* se diferente de 0: volta para faz jogada
-			* caso pontos estejam em mais de 10: passa jogada
-	* se humano
-		* faz jogada:
-			* se zero : passa
-			* se hold : armazena pontos e passa
-			* se play : volta a fazer jogada
-	* ao fim de cada rodada mostra o score board
-* tela do fim
-	* exibe o log de jogadas
+		* sortear quem começa
+			* se human começa
+				* oferece as opções
+					* se r, então rola faz uma jogada
+						* caso valor jogado mais o valor o total até então passe os 100 então game_over() 
+							* mostra o log final do jogo e indica o vencedor  
+					* se h, passa o turno
+					* se q, sai do jogo
+					* se m, mostra o manual
+					* se l, mostra o log 		 
+			* se machine começa
+				* faz 5 jogadas
+				* caso 1 em alguma delas, passa o turno
+				* caso valor jogado mais o valor o total até então passe os 100 então game_over() 
+					* mostra o log final do jogo e indica o vencedor 
+				* depois das 5 jogadas passa o turno	
