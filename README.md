@@ -7,18 +7,18 @@ Basseado na quantidade de faces, retorna um número aleatório
 de 1 até o numero de faces  
 	* Atributos 
 		* faces -> o numero sorteado por um dado será de 1 até faces  
-	<h4> Métodos </h4>  
+	* Métodos  
 		* Construtor -> por padrão inicia um dado com 6 faces  
 		* Construtor(int) -> recebe como parâmetro um int e iniciar um dado com int faces  
 		* roll -> faz o sorteio do dado e retorna o numero sorteado  
 		* set_faces -> ajusta a quantidade de faces do dado  
 
-<h3> Jogador </h3>
+* Jogador 
  Essa classe representa um jogador que pode ser máquina ou humano.
  O jogador também o seu log de jogadas, informando o que houve em cada
  rodada. Além disso, o jogador também tem seus pontos conquistados no
  round e no jogo como um todo.  
-	<h4> Atributos </h4>  
+	* Atributos 
 		* name -> nome de um jogador  
 		* controller -> se quem contra é humano 1, se quem controla é máquina 0  
 		* player_log -> logo do jogo que exibe o resumo de cada turno  
@@ -26,7 +26,7 @@ de 1 até o numero de faces
 		* round_points -> pontos acumulados no turno  
 		* player_dice -> dado do jogador  
 		* round_log -> é a string que resume o turno e que vai ser amazenada no player_log  
-	<h4> Métodos </h4>  
+	* Métodos  
 		* Construtor -> por padrão constroi um player chamado corleone que é máquina e tem um dado de 6 faces  
 		* Construtor(int, int) -> constroi um player com nome genérico.Primeiro int diz se é maquina ou humano. Segundo int é número de faces do dado  
 		* get_name e set_name -> retorna o nome e ajusta o nome do player  
