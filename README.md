@@ -1,7 +1,7 @@
 # Pig Dice Cpp IMD
 Projeto desenvolvido para a disciplina de Linguagem de Programação 1 na UFRN. 
 ## Classes
-### Dado
+<h3> Dado </h3>
 Essa classe representa um dado que pode ter várias faces.
 Basseado na quantidade de faces, retorna um número aleatório
 de 1 até o numero de faces
