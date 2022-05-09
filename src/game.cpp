@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-
+#include <unistd.h>
 /// método que exibe as regras do jogo
 void Game::show_rules(){
   std::ifstream rules("gamerules.txt");
@@ -25,6 +25,8 @@ Game::Game(){
   human.set_name();
   players_on.push_back(machine);
   players_on.push_back(human);
+  players_on[0].set_player_log(players_on[0].get_name());
+  players_on[1].set_player_log(players_on[1].get_name());
   sorteio();
 };
 ///  método sortear. se 0, machine começa. se 1, human começa
@@ -41,8 +43,10 @@ void Game::sorteio(){
 };
 /// entrada das opções
 void Game::option_in(){
-  std::cout << "------------------------------------------------" << std::endl;
-  std::cout << ">>> h - hold; r - roll; q - quit; m - manual <<<" << std::endl; 
+  std::cout << "-------------------------------------------------------------" << std::endl;
+  std::cout << "|                          Opções                           |" << std::endl;
+  std::cout << "|     h - hold; r - roll; q - quit; m - manual; l - log     |" << std::endl; 
+  std::cout << "-------------------------------------------------------------" << std::endl;
   std::cout << ">>> ";
   std::cin.clear();
   std::cin >> option;
@@ -96,20 +100,23 @@ void Game::quit(){
 
 /// Placar do jogo
 void Game::board_game(){
-  std::cout << std:: endl << "    >>>BOARD GAME<<<   " << std::endl;
-  std::cout << "-----------------------" << std::endl << std::endl;
+  std::cout << std::endl;
+  std::cout << "=============================================================" << std::endl;
+  std::cout << "|                        >>>BOARD  GAME<<<                  |" << std::endl;
+  std::cout << "|-----------------------------------------------------------|" << std::endl;
   std::cout << players_on[0].get_name()<< "  " << players_on[0].get_total_points()<<std::endl;
   std::cout << players_on[1].get_name()<< "  " << players_on[1].get_total_points()<<std::endl;
-  std::cout << std::endl << "-----------------------" << std::endl;
+  std::cout << "=============================================================" << std::endl << std::endl;
 };
 
 /// fim de jogo
 void Game::game_over(int win){
   board_game();
   players_on[0].show_player_log();
-  std::cout << "======================================"<<std::endl;
+  std::cout << "============================================================="<<std::endl;
   players_on[1].show_player_log();
-  std::cout << "======================================"<<std::endl;
+  std::cout << "============================================================="<<std::endl;
+  
   std::cout << std:: endl << players_on[win].get_name() << " venceu!!!";
   estado=0;
 };
@@ -134,8 +141,9 @@ void Game::play(){
   }
   if(turno == 0){ //se a vez for da máquina
     std::cout << "Vez de " << players_on[turno].get_name() << std::endl;
-    std::cout << std::endl << "-----------------------" << std::endl;
+    std::cout << std::endl << "-------------------------------------------------------------" << std::endl;
       for(int i = 0; i < 5;i++){
+        sleep(1);
         if(turno==1){break;}
         else{turn_roll();}
       }

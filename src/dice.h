@@ -8,9 +8,9 @@
  */
 class Dice{
 	private:
-		int faces; 	//!< Quantidade de faces que tem o dado
+		int faces; 	    //!< Quantidade de faces que tem o dado
 	public:
-		Dice(int);	//!< Método construtor
+		Dice(int);	     //!< Método construtor
 		Dice();		//!< Método construtor
 		int roll(); //!< Método que gera o número aleatório
     void set_faces(int);
