@@ -5,14 +5,15 @@ Projeto desenvolvido para a disciplina de Linguagem de Programação 1 na UFRN.
 Essa classe representa um dado que pode ter várias faces.
 Basseado na quantidade de faces, retorna um número aleatório
 de 1 até o numero de faces
-	#### Atributos
-		* faces -> o numero sorteado por um dado será de 1 até faces
-	#### Métodos
-		* Construtor -> por padrão inicia um dado com 6 faces
-		* Construtor(int) -> recebe como parâmetro um int e iniciar um dado com int faces
-		* roll -> faz o sorteio do dado e retorna o numero sorteado
-		* set_faces -> ajusta a quantidade de faces do dado
-* Jogo
+<h4> Atributos </h4>
+* faces -> o numero sorteado por um dado será de 1 até faces
+<h4> Métodos </h4>
+* Construtor -> por padrão inicia um dado com 6 faces
+* Construtor(int) -> recebe como parâmetro um int e iniciar um dado com int faces
+* roll -> faz o sorteio do dado e retorna o numero sorteado
+* set_faces -> ajusta a quantidade de faces do dado
+
+<h3> Jogo </h3>
 	* exibe as telas
 	* recebe as opções
 	* avalia o jogo
