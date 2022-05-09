@@ -1,8 +1,15 @@
->>> Bem vindo ao Pig Dice 
+-------------------------------------------------------------
+                  BEM VINDO AO PIG DICE
 
   # O objetivo do jogo é chegar primeiro aos 100 pontos.
   # O jogo é dividido em turnos. 
-  # Em cada turno, o jogador tem direito a rolar o dado quantas vezes quiser:
-        • Se o valor do dado for 1, o jogador perde o turno e os pontos conquistados nele
-        • Se o valor do dado for diferente de 1, os pontos são somados ao turno
-  # Quando o jogador encerra o turno, os pontos conquistados no turno são somados a pontuação do jogo
+  # Em cada turno, o jogador tem direito a rolar o dado 
+  quantas vezes quiser:
+    • Se o valor do dado for 1, o jogador perde o turno 
+      e os pontos conquistados nele
+    • Se o valor do dado for diferente de 1, os pontos 
+      são somados ao turno
+  # Quando o jogador encerra o turno, os pontos conquistados 
+  no turno são somados a pontuação do jogo
+
+-------------------------------------------------------------

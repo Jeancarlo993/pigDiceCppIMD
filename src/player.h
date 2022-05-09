@@ -18,14 +18,16 @@ class Player{
 		int round_points;						//!< pontos do turno
 	public:
 		Dice player_dice;						//!< o dado do jogador
+    std::string round_log;
 		Player();								//!< construtor
-		Player(std::string,int,int);			//!< construtor
+		Player(int,int);			//!< construtor
 		std::string get_name();					//!< retorna nome
-		void set_name(std::string);				//!< ajusta o nome
+		void set_name();				        //!< ajusta o nome
 		void show_player_log();					//!< mostra o log
-		void set_player_log(std::string);	 	//!< acrescenta uma entra no log
+		void set_player_log(std::string);	 	//!< acrescenta uma entrada no log
 		void set_total_points(int);				//!< modifica pontuação total
 		int get_total_points();					//!< retorna pontuação total
 		void set_round_points(int);				//!< modifica pontuação do turno
+    void sum_round_points(int);
 		int get_round_points();					//!< retorna pontuação do turno
 };
